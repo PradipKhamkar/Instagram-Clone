@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide the scrollbar */
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.selectFile::file-selector-button {
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  background-color: #0095f6;
+}
+input::file-selector-button {
+  color: inherit;
+  padding: 0.5em;
+  border: none;
+  border-radius: 1px;
+  background-color: inherit;
+  /* background-color: #3c76d2; */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  animation: rotate 2s linear infinite;
+}
