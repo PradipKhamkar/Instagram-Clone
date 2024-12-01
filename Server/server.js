@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "Server/.env" });
+  require("dotenv").config({ path: "server/.env" });
 }
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const cloudinary = require("cloudinary");
 const expressFileUpload = require("express-fileupload");
-const connectDB = require("./config/Connection");
+const connectDB = require("./config/connection");
 const userRoute = require("./routes/userRoutes");
 const postRoute = require("./routes/postRoute");
 const storyRoute = require("./routes/storyRoute");
