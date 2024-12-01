@@ -425,8 +425,8 @@ const passwordResetLink = async (req, res) => {
         const transporter = nodeMailer.createTransport({
           service: "gmail",
           auth: {
-            user: process.env.SMPT_MAIL,
-            pass: process.env.SMPT_PASSWORD,
+            user: process.env.SMTP_MAIL,
+            pass: process.env.SMTP_PASSWORD,
           },
         });
 
@@ -437,7 +437,7 @@ const passwordResetLink = async (req, res) => {
         // const link = `${req.protocol}://localhost:3000/ResetPassword/${user._id}/${token}`;
 
         await transporter.sendMail({
-          from: process.env.SMPT_MAIL,
+          from: process.env.SMTP_MAIL,
           to: user.email,
           subject: "Instagram Password Reset",
           html: `<h2>Hello ${user?.userName}</h2><br>
